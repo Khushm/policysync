@@ -1,0 +1,25 @@
+{
+  "name": "policy",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "framer-motion": "^12.23.25",
+    "lucide-react": "^0.556.0",
+    "react-router-dom": "^7.10.1",
+    "recharts": "^3.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
+    "vite": "^7.2.6"
+  }
+}

@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Faith Mission",
+        "type": "shelter",
+        "status": "available",
+        "lat": 39.966,
+        "lng": -82.990,
+        "address": "245 N Grant Ave, Columbus, OH",
+        "phone": "614-224-6617",
+        "capacity": "200 (Space Available)",
+        "pets": false,
+        "hours": "24/7",
+        "desc": "Emergency shelter and resource center."
+    },
+    {
+        "id": 2,
+        "name": "Van Buren Center",
+        "type": "shelter",
+        "status": "full",
+        "lat": 39.945,
+        "lng": -83.020,
+        "address": "595 Van Buren Dr, Columbus, OH",
+        "phone": "614-715-2030",
+        "capacity": "300 (Full)",
+        "pets": false,
+        "hours": "24/7",
+        "desc": "Emergency shelter for families and individuals."
+    },
+    {
+        "id": 3,
+        "name": "YWCA Family Center",
+        "type": "shelter",
+        "status": "available",
+        "lat": 39.970,
+        "lng": -82.940,
+        "address": "900 Harvey Ct, Columbus, OH",
+        "phone": "614-253-3910",
+        "capacity": "50 (Space Available)",
+        "pets": false,
+        "hours": "24/7",
+        "desc": "Emergency shelter for families with children."
+    },
+    {
+        "id": 4,
+        "name": "Mid-Ohio Food Collective",
+        "type": "food",
+        "status": "available",
+        "lat": 39.880,
+        "lng": -83.030,
+        "address": "3960 Brookham Dr, Grove City, OH",
+        "phone": "614-277-3663",
+        "capacity": "Walk-ins Welcome",
+        "pets": false,
+        "hours": "M-F 8am-4pm",
+        "desc": "Fresh food and pantry staples."
+    },
+    {
+        "id": 5,
+        "name": "Clintonville-Beechwold Resources",
+        "type": "food",
+        "status": "available",
+        "lat": 40.030,
+        "lng": -83.010,
+        "address": "3222 N High St, Columbus, OH",
+        "phone": "614-268-3539",
+        "capacity": "High Supply",
+        "pets": true,
+        "hours": "M-F 9am-12pm",
+        "desc": "Food pantry and financial assistance."
+    }
+]

@@ -1,0 +1,124 @@
+{
+  "disasterPrograms": [
+    {
+      "programName": "National Flood Insurance Program (NFIP)",
+      "jurisdiction": "Federal",
+      "webLink": "https://www.floodsmart.gov",
+      "phoneNumber": "(877) 336-2627",
+      "summary": "Provides flood insurance to property owners, renters, and businesses. Franklin County participates. Most homeowners insurance does NOT cover flood damage. Coverage up to $250,000 for buildings and $100,000 for contents.",
+      "disasterType": "Flooding"
+    },
+    {
+      "programName": "FEMA Flood Map Service Center",
+      "jurisdiction": "Federal",
+      "webLink": "https://msc.fema.gov",
+      "phoneNumber": "N/A",
+      "summary": "Look up your address to learn flood risk and Special Flood Hazard Areas. Maps show flood zones, floodplain boundaries, and base flood elevations.",
+      "disasterType": "Flooding"
+    },
+    {
+      "programName": "Franklin County Floodplain Management",
+      "jurisdiction": "County",
+      "webLink": "https://www.franklincountyohio.gov/Business-Development/Development-Planning/Planning-Zoning/Floodplain",
+      "phoneNumber": "N/A",
+      "summary": "Administers NFIP locally, sets minimum standards for floodplain development, and enforces regulations.",
+      "disasterType": "Flooding"
+    },
+    {
+      "programName": "Ohio Hazard Mitigation Plan",
+      "jurisdiction": "State",
+      "webLink": "https://ema.ohio.gov",
+      "phoneNumber": "N/A",
+      "summary": "Statewide plan addressing flood hazards. 754 Ohio communities participate in NFIP with 23,661 policies covering $4.4 billion.",
+      "disasterType": "Flooding"
+    },
+    {
+      "programName": "FEMA Individual Assistance - Flood",
+      "jurisdiction": "Federal",
+      "webLink": "https://www.disasterassistance.gov",
+      "phoneNumber": "1-800-621-3362",
+      "summary": "After presidential disaster declaration, provides grants for temporary housing, home repairs, and expenses. Apply within 60 days.",
+      "disasterType": "Flooding"
+    },
+    {
+      "programName": "SBA Disaster Loans - Flood",
+      "jurisdiction": "Federal",
+      "webLink": "https://www.sba.gov/funding-programs/disaster-assistance",
+      "phoneNumber": "N/A",
+      "summary": "Low-interest loans for uninsured flood losses to homeowners, renters, and businesses.",
+      "disasterType": "Flooding"
+    },
+    {
+      "programName": "Ohio Department of Insurance Toolkit",
+      "jurisdiction": "State",
+      "webLink": "https://insurance.ohio.gov",
+      "phoneNumber": "N/A",
+      "summary": "Resources for flood recovery, insurance claims navigation, and financial preparedness.",
+      "disasterType": "Flooding"
+    },
+    {
+      "programName": "American Red Cross Flood Recovery",
+      "jurisdiction": "Nonprofit",
+      "webLink": "https://www.redcross.org/local/ohio/central-and-southern-ohio.html",
+      "phoneNumber": "614-253-2740",
+      "summary": "Provides emergency shelter, food, health services, and recovery assistance.",
+      "disasterType": "Flooding"
+    }
+  ],
+  "emergencyContacts": [
+    {
+      "organization": "Franklin County Emergency Management & Homeland Security",
+      "phoneNumber": "N/A",
+      "webLink": "https://fcemhs.org",
+      "notes": "Primary county emergency management agency"
+    },
+    {
+      "organization": "Columbus Public Health",
+      "phoneNumber": "N/A",
+      "webLink": "https://www.columbus.gov/publichealth",
+      "notes": "City public health emergency response"
+    },
+    {
+      "organization": "National Response Center",
+      "phoneNumber": "1-800-424-8802",
+      "webLink": "https://nrc.uscg.mil",
+      "notes": "24/7 hazardous releases reporting"
+    },
+    {
+      "organization": "Ohio EPA Spill Line",
+      "phoneNumber": "1-800-282-9378",
+      "webLink": "https://epa.ohio.gov/divisions-and-offices/emergency-response",
+      "notes": "24/7 spill and release reporting"
+    },
+    {
+      "organization": "American Red Cross Central Ohio",
+      "phoneNumber": "614-253-2740 or 1-800-733-2767",
+      "webLink": "https://www.redcross.org/local/ohio/central-and-southern-ohio.html",
+      "notes": "24/7 disaster assistance"
+    },
+    {
+      "organization": "FEMA Helpline",
+      "phoneNumber": "1-800-621-3362",
+      "webLink": "https://www.disasterassistance.gov",
+      "notes": "Federal disaster assistance"
+    },
+    {
+      "organization": "211 Central Ohio",
+      "phoneNumber": "211",
+      "webLink": "https://211centralohio.org",
+      "notes": "Information and referral service"
+    },
+    {
+      "organization": "Disaster Distress Helpline",
+      "phoneNumber": "1-800-985-5990",
+      "webLink": "N/A",
+      "notes": "Crisis counseling for disaster-related stress"
+    },
+    {
+      "organization": "Disaster Legal Services",
+      "phoneNumber": "888-534-1432",
+      "webLink": "N/A",
+      "notes": "Free legal help for disaster survivors"
+    }
+  ]
+}

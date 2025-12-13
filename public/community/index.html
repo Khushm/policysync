@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FranklinResponse - Community</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="app-header">
+        <div class="brand">
+            <div class="logo-icon"></div>
+            <h1>FranklinResponse</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="#" class="active">Community Members</a>
+            <a href="/policy-maker">Policymakers</a>
+            <a href="/ngo/index.html">NGOs</a>
+        </nav>
+        <div class="lang-toggle">
+            <span class="globe-icon">🌐</span> Español
+        </div>
+    </header>
+
+    <div class="filter-bar">
+        <div class="filter-group">
+            <label>Zip Code</label>
+            <input type="text" id="zip-input" placeholder="e.g. 43215">
+        </div>
+        <div class="filter-group">
+            <label>Annual Income</label>
+            <select id="income-input">
+                <option value="">Select Range</option>
+                <option value="low">
+                    < $20,000</option>
+                <option value="med-low">$20k - $40k</option>
+                <option value="med">$40k - $60k</option>
+                <option value="high">$60k+</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>Household Size</label>
+            <select id="size-input">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+            </select>
+        </div>
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="disability-check"> Disability Accommodations Required</label>
+            <label><input type="checkbox" id="transport-check"> Need Transportation</label>
+        </div>
+        <div class="actions">
+            <button class="clear-btn" id="clear-btn">Clear</button>
+            <button class="find-btn" id="find-btn">Find Resources</button>
+        </div>
+    </div>
+
+    <main class="dashboard-grid">
+        <!-- Sidebar Left: AI & Recs -->
+        <aside class="sidebar-left">
+            <div class="card ai-recommendations">
+                <div class="card-header">
+                    <h2>AI Recommendations</h2>
+                </div>
+                <div class="card-body">
+                    <p id="ai-status-text">Enter your information above to get personalized recommendations.</p>
+                    <button class="download-btn">Download Summary PDF</button>
+                    <p class="small-text">Get a personalized summary of recommended resources and policies.</p>
+                </div>
+            </div>
+
+            <div class="card chatbot">
+                <div class="card-header dark">
+                    <h2>Franklin Assistant</h2>
+                </div>
+                <div class="chat-window" id="chat-window">
+                    <div class="msg bot">
+                        Hello! I can help you find shelter, food, or explain policies. How can I help?
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Ask a question...">
+                    <button id="send-btn">➤</button>
+                </div>
+            </div>
+
+            <div class="legend-card">
+                <div class="legend-item"><span class="dot green"></span> Shelter (Open)</div>
+                <div class="legend-item"><span class="dot orange"></span> Shelter (Full)</div>
+                <div class="legend-item"><span class="dot blue"></span> Food Pantry</div>
+            </div>
+        </aside>
+
+        <!-- Center: Map -->
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+
+        <!-- Sidebar Right: Resources & Policies -->
+        <aside class="sidebar-right">
+            <!-- Tabs could go here, but stacking for simplicity as per image -->
+
+            <div class="panel-section">
+                <div class="panel-head">
+                    <h3>Resources</h3>
+                </div>
+                <div id="resource-list" class="scrolly-list">
+                    <!-- Resource Cards Injected Here -->
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <div class="panel-head">
+                    <h3>Relevant Policies</h3>
+                </div>
+                <div id="policy-list" class="scrolly-list">
+                    <!-- Policy Cards Injected Here -->
+                    <div class="resource-card policy">
+                        <span class="tag housing">Housing</span>
+                        <h4>Home Loss Guide</h4>
+                        <p>Steps to take after losing your home.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

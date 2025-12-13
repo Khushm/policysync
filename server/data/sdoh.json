@@ -1,0 +1,44 @@
+{
+    "43123": {
+        "zip": "43123",
+        "population": 25000,
+        "median_income": 85000,
+        "poverty_rate": 5,
+        "uninsured": 4
+    },
+    "43205": {
+        "zip": "43205",
+        "population": 15000,
+        "median_income": 32000,
+        "poverty_rate": 28,
+        "uninsured": 12
+    },
+    "43215": {
+        "zip": "43215",
+        "population": 12000,
+        "median_income": 65000,
+        "poverty_rate": 15,
+        "uninsured": 7
+    },
+    "43224": {
+        "zip": "43224",
+        "population": 38000,
+        "median_income": 41000,
+        "poverty_rate": 19,
+        "uninsured": 10
+    },
+    "43026": {
+        "zip": "43026",
+        "population": 45000,
+        "median_income": 95000,
+        "poverty_rate": 3,
+        "uninsured": 2
+    },
+    "43203": {
+        "zip": "43203",
+        "population": 10000,
+        "median_income": 20000,
+        "poverty_rate": 45,
+        "uninsured": 18
+    }
+}

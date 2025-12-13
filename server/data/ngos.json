@@ -1,0 +1,72 @@
+[
+    {
+        "name": "A Kid Again Central Ohio",
+        "categories": "Family Safety; Homelessness; Workforce Development",
+        "website": "https://akidagain.org",
+        "zip": "43215",
+        "description": "Fostering hope for families with life-threatening conditions."
+    },
+    {
+        "name": "A Step in the Right Direction",
+        "categories": "Advocacy; Affordable Housing; Community Building; Educational Programming",
+        "website": "https://astepintherightdirection.org",
+        "zip": "43205",
+        "description": "Services for youth and education."
+    },
+    {
+        "name": "Action for Children",
+        "categories": "Advocacy; Developmental Disabilities; Services for People with Disabilities",
+        "website": "https://actionforchildren.org",
+        "zip": "43215",
+        "description": "Child care and early education support."
+    },
+    {
+        "name": "Adaptive Sports Connection",
+        "categories": "In-School or Afterschool Program; Youth and Education",
+        "website": "https://adaptivesportsconnection.org",
+        "zip": "43065",
+        "description": "Sports and recreation for people with disabilities."
+    },
+    {
+        "name": "Advanced Technology Education",
+        "categories": "Advocacy",
+        "website": "https://ates.org",
+        "zip": "43201",
+        "description": "Technology education and advocacy."
+    },
+    {
+        "name": "Advancing Opportunity",
+        "categories": "Addiction Services; Behavioral Health Provider; Child Care",
+        "website": "https://advancingopportunity.org",
+        "zip": "43223",
+        "description": "Services for people with disabilities and re-entry."
+    },
+    {
+        "name": "American Red Cross Greater Columbus",
+        "categories": "Family Safety; Referral Services; Refugee and Immigration Services",
+        "website": "https://redcross.org",
+        "zip": "43205",
+        "description": "Emergency assistance, disaster relief, and safety education."
+    },
+    {
+        "name": "Mid-Ohio Food Collective",
+        "categories": "Food and Nutrition; Food Pantry; Food Programs",
+        "website": "https://mofc.org",
+        "zip": "43123",
+        "description": "Ending hunger one nutritious meal at a time."
+    },
+    {
+        "name": "Faith Mission",
+        "categories": "Homelessness; Housing; Shelter",
+        "website": "https://lssnetworkofhope.org",
+        "zip": "43215",
+        "description": "Emergency shelter and resource center."
+    },
+    {
+        "name": "YWCA Family Center",
+        "categories": "Homelessness; Family Safety; Shelter",
+        "website": "https://ywcacolumbus.org",
+        "zip": "43217",
+        "description": "Emergency shelter for families with children."
+    }
+]
