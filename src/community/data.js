@@ -87,7 +87,12 @@ export const POLICIES = [
     { title: 'Flood Insurance', icon: 'umbrella', category: 'financial', desc: 'Understanding your coverage.', type: 'Financial' },
     { title: 'Legal Aid', icon: 'scale', category: 'legal', desc: 'Free legal support for victims.', type: 'Legal' },
     { title: 'Tenant Rights', icon: 'key', category: 'housing', desc: 'Rights for renters in disaster zones.', type: 'Housing' },
-    { title: 'Small Business Loans', icon: 'briefcase', category: 'financial', desc: 'SBA loans for recovery.', type: 'Financial' }
+    { title: 'Small Business Loans', icon: 'briefcase', category: 'financial', desc: 'SBA loans for recovery.', type: 'Financial' },
+    /* Added via Excel Import */
+    { title: 'Tornado Safety Info', icon: 'wind', category: 'safety', desc: 'Guidelines for taking shelter during a tornado.', type: 'Tornado' },
+    { title: 'Debris Removal', icon: 'trash-2', category: 'housing', desc: 'Schedule pickup for storm debris.', type: 'Tornado' },
+    { title: 'Student Emergency Fund', icon: 'graduation-cap', category: 'financial', desc: 'Grants for displaced university students.', type: 'University' },
+    { title: 'Campus Shelter Loc', icon: 'map-pin', category: 'shelter', desc: 'Safe zones on OSU campus.', type: 'University' }
 ];
 
 export const FRANKLIN_COUNTY_ZIPS = [

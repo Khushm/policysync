@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ShieldAlert, Globe } from 'lucide-react';
-import '../community/CommunityDashboard.css'; // Ensure styles are applied
+import './Header.css'; // Dedicated styles
 
 const Header = () => {
     const [lang, setLang] = useState('en');
@@ -16,7 +16,7 @@ const Header = () => {
                 <ShieldAlert size={24} />
                 <span>FranklinResponse</span>
             </div>
-            <nav class="main-nav">
+            <nav className="main-nav">
                 <NavLink to="/community" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
                     Community Members
                 </NavLink>

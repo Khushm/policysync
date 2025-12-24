@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import './CommunityDashboard.css';
+import './DashboardLayout.css';
 import CommunityMap from './CommunityMap';
 import Chatbot from './Chatbot';
 import { RESOURCES, POLICIES } from './data';
@@ -85,60 +85,72 @@ const CommunityDashboard = () => {
         return recs;
     }, [filters]);
 
+    const generatePDF = () => {
+        alert("Downloading PDF Summary... (Mock Functionality)");
+        // In a real app, use jsPDF or logic from script.js
+    };
+
     return (
         <div className="community-dashboard">
             {/* Filter Bar */}
             <div className="filter-bar hero-compact dark-hero">
-                <div className="form-group">
-                    <label><MapPin size={12} /> Zip Code</label>
-                    <input
-                        type="text"
-                        id="zip"
-                        placeholder="e.g. 43215"
-                        value={filters.zip}
-                        onChange={handleFilterChange}
-                    />
+                <div className="hero-text">
+                    <h1>Disaster Response & Recovery</h1>
+                    <p>Find shelter, food, and policy guidance.</p>
                 </div>
-                <div className="form-group">
-                    <label><Users size={12} /> Annual Income</label>
-                    <select id="income" value={filters.income} onChange={handleFilterChange}>
-                        <option value="">Select Range</option>
-                        <option value="low">&lt; $30,000</option>
-                        <option value="med">$30k - $60k</option>
-                        <option value="high">&gt; $60,000</option>
-                    </select>
-                </div>
-                <div className="form-group">
-                    <label><Users size={12} /> Household Size</label>
-                    <select id="household" value={filters.household} onChange={handleFilterChange}>
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, '10+'].map(n => (
-                            <option key={n} value={n}>{n}</option>
-                        ))}
-                    </select>
-                </div>
-                <div className="checkbox-group-vertical" style={{ color: 'white' }}>
-                    <label className="checkbox-label">
+
+                <div className="sdoh-form">
+                    <div className="form-group">
+                        <label><MapPin size={12} /> Zip Code</label>
                         <input
-                            type="checkbox"
-                            id="disability"
-                            checked={filters.disability}
+                            type="text"
+                            id="zip"
+                            placeholder="e.g. 43215"
+                            value={filters.zip}
                             onChange={handleFilterChange}
                         />
-                        Disability Accommodations
-                    </label>
-                    <label className="checkbox-label">
-                        <input
-                            type="checkbox"
-                            id="transport"
-                            checked={filters.transport}
-                            onChange={handleFilterChange}
-                        />
-                        Need Transportation
-                    </label>
-                </div>
-                <div className="actions">
-                    <button className="clear-btn" onClick={clearFilters}>Clear</button>
-                    <button className="find-btn">Find Resources</button>
+                    </div>
+                    <div className="form-group">
+                        <label><Users size={12} /> Annual Income</label>
+                        <select id="income" value={filters.income} onChange={handleFilterChange}>
+                            <option value="">Select Range</option>
+                            <option value="low">&lt; $30,000</option>
+                            <option value="med">$30k - $60k</option>
+                            <option value="high">&gt; $60,000</option>
+                        </select>
+                    </div>
+                    <div className="form-group">
+                        <label><Users size={12} /> Household Size</label>
+                        <select id="household" value={filters.household} onChange={handleFilterChange}>
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, '10+'].map(n => (
+                                <option key={n} value={n}>{n}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="checkbox-group-vertical" style={{ color: 'white' }}>
+                        <label className="checkbox-label">
+                            <input
+                                type="checkbox"
+                                id="disability"
+                                checked={filters.disability}
+                                onChange={handleFilterChange}
+                            />
+                            Disability Accommodations
+                        </label>
+                        <label className="checkbox-label">
+                            <input
+                                type="checkbox"
+                                id="transport"
+                                checked={filters.transport}
+                                onChange={handleFilterChange}
+                            />
+                            Need Transportation
+                        </label>
+                    </div>
+                    <div className="actions">
+                        <button className="clear-btn" onClick={clearFilters}>Clear</button>
+                        <button className="find-btn">Find Resources</button>
+                    </div>
                 </div>
             </div>
 
@@ -160,31 +172,30 @@ const CommunityDashboard = () => {
                                     </p>
                                 ))
                             )}
-                            <button className="download-btn">
+                            <button className="download-btn" onClick={generatePDF}>
                                 <Download size={16} /> Download Summary PDF
                             </button>
                         </div>
                     </div>
 
                     <Chatbot />
-
-                    <div className="legend-card">
-                        <div className="legend-item"><span className="dot green"></span> Shelter (Open)</div>
-                        <div className="legend-item"><span className="dot orange"></span> Shelter (Full)</div>
-                        <div className="legend-item"><span className="dot blue"></span> Food Pantry</div>
-                    </div>
                 </aside>
 
                 {/* Col 2: Map */}
                 <section className="map-section">
                     <CommunityMap resources={filteredResources} />
+                    <div className="map-legend">
+                        <div className="legend-item"><span className="dot green"></span> Shelter (Open)</div>
+                        <div className="legend-item"><span className="dot orange"></span> Shelter (Full)</div>
+                        <div className="legend-item"><span className="dot blue"></span> Food Pantry</div>
+                    </div>
                 </section>
 
                 {/* Col 3: Resources */}
                 <aside className="sidebar resources-column">
-                    <div className="panel-header" style={{ justifyContent: 'space-between' }}>
+                    <div className="panel-header">
                         <div className="header-title">
-                            <h3>Resources</h3>
+                            <h3>Resources ({filteredResources.length})</h3>
                         </div>
                         <div className="sort-menu-container">
                             <button className="icon-btn" onClick={() => setShowResourceMenu(!showResourceMenu)}>
