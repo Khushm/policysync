@@ -4,10 +4,12 @@ import LandingPage from './pages/LandingPage';
 import PolicyDashboard from './policymaker/PolicyDashboard';
 import CommunityDashboard from './community/CommunityDashboard';
 import NGODashboard from './ngos/NGODashboard';
+import Header from './components/Header';
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/policymaker" element={<PolicyDashboard />} />

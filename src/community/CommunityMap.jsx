@@ -27,9 +27,10 @@ const RecenterMap = ({ center }) => {
 const CommunityMap = ({ resources }) => {
     const center = [39.9612, -82.9988]; // Columbus, OH
 
-    const createCustomIcon = (type, status) => {
-        const color = status === 'full' ? '#f97316' :
-            type === 'food' ? '#3b82f6' : '#22c55e';
+    const createCustomIcon = (type, isAtCapacity) => {
+        let color = '#10b981'; // Green
+        if (type === 'shelter' && isAtCapacity) color = '#f97316'; // Orange
+        if (type === 'pantry') color = '#1e3a8a'; // Dark Blue
 
         const markerHtml = `<div style="background-color: ${color}; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.3);"></div>`;
 
@@ -53,12 +54,12 @@ const CommunityMap = ({ resources }) => {
                 <Marker
                     key={item.id}
                     position={[item.lat, item.lng]}
-                    icon={createCustomIcon(item.type, item.status)}
+                    icon={createCustomIcon(item.type, item.isAtCapacity)}
                 >
                     <Popup>
-                        <b>{item.name}</b><br />
+                        <b>{item.title}</b><br />
                         {item.address}<br />
-                        {item.status === 'full' ? 'FULL' : 'Available'}
+                        {item.isAtCapacity ? 'FULL' : 'Available'}
                     </Popup>
                 </Marker>
             ))}
