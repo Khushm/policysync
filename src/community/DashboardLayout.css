@@ -16,19 +16,22 @@
     /* OSU Gray */
 }
 
+/* Unified Dashboard Layout */
 .community-dashboard {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg-page);
-    color: var(--text-main);
-    height: calc(100vh - 60px);
-    /* Adjust for main app header if exists */
+    height: calc(100vh - 64px);
+    /* Account for main app header (approx 64px) */
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    background-color: var(--bg-page);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
 }
 
 /* Filter Bar (Hero) */
 .filter-bar {
-    background: #1e293b;
+    background: #BA0C2F;
+    /* Scarlet */
     color: white;
     padding: 1.5rem 2rem;
     display: flex;
@@ -111,26 +114,35 @@
     gap: 1rem;
 }
 
-.clear-btn {
+.filter-bar .actions .clear-btn {
     background: transparent;
     border: none;
-    color: #94a3b8;
+    color: #000000 !important;
     text-decoration: underline;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.filter-bar .actions .clear-btn:hover {
+    color: #333333 !important;
 }
 
 .find-btn {
-    background: var(--blue);
-    color: white;
-    border: none;
+    background: white;
+    color: #BA0C2F;
+    border: 1px solid white;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 .find-btn:hover {
-    background: #0284c7;
+    background: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Dashboard Grid */
@@ -139,9 +151,23 @@
     display: grid;
     /* Main Layout: AI sidebar | Map | Resources | Policies */
     grid-template-columns: 350px 1fr 350px 350px;
+    grid-template-rows: minmax(0, 1fr);
+    /* CRITICAL: Prevents content from blowing out height */
     overflow: hidden;
     height: 100%;
     width: 100%;
+    min-height: 0;
+}
+
+/* Sidebar Base */
+.sidebar {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+    /* Critical for scrolling children */
+    background: var(--bg-page);
 }
 
 /* Sidebar Left */
@@ -152,6 +178,8 @@
     gap: 1rem;
     overflow-y: auto;
     background: var(--bg-page);
+    min-height: 0;
+    /* Important for grid containment */
 }
 
 .card {
@@ -393,11 +421,12 @@
 .chat-input {
     flex: 1;
     border: 1px solid var(--border);
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 9999px;
     /* Pill */
     outline: none;
     font-size: 0.85rem;
+    background-color: white !important;
 }
 
 .chat-send {
@@ -495,16 +524,14 @@
     display: inline-block;
 }
 
-.dot.green {
-    background: var(--green);
+.dot.shelter {
+    background: #BA0C2F;
+    /* Scarlet */
 }
 
-.dot.orange {
-    background: var(--orange);
-}
-
-.dot.blue {
-    background: var(--blue);
+.dot.pantry {
+    background: #1e3a8a;
+    /* Dark Blue */
 }
 
 /* Map Section */
@@ -512,13 +539,17 @@
     position: relative;
     height: 100%;
     width: 100%;
+    min-height: 0;
+    /* Prevents shrinking issues or blowout */
+    overflow: hidden;
+    /* Ensure anything absolute stays inside */
 }
 
 .map-legend {
     position: absolute;
     bottom: 1rem;
-    right: 1rem;
-    /* Bottom Right as requested */
+    left: 1rem;
+    /* Bottom Left as requested */
     background: white;
     padding: 0.75rem 1rem;
     border-radius: 8px;
@@ -544,6 +575,8 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-height: 0;
+    /* Important for grid containment */
 }
 
 .panel-section {
@@ -552,6 +585,8 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    min-height: 0;
+    /* Important for flex containment */
 }
 
 .panel-header {
@@ -631,10 +666,28 @@
     color: #0f172a;
 }
 
-.resource-card p {
+.official-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #ce1126;
+    /* Match theme color */
+    text-decoration: none;
     font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.official-link:hover {
+    color: #a00d1e;
+    text-decoration: underline;
+}
+
+/* Ensure card content handles long descriptions */
+.resource-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.75rem;
     line-height: 1.4;
 }
 
@@ -670,4 +723,13 @@
     .map-section {
         height: 400px;
     }
+}
+
+/* AI Recommendation Highlighting */
+.resource-card.highlighted-ai {
+    border: 2px solid #BA0C2F !important;
+    background: #fffafa !important;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(186, 12, 47, 0.15) !important;
+    z-index: 10;
 }
